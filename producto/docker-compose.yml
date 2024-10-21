@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  comercio-producto:
+    build: .
+    ports:
+      - "9092:9092"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://cliente:5432/comerciobd
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=123456

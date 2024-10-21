@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  cliente-service:
+    build: .
+    ports:
+      - "9091:9091"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/comerciobd
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=123456
